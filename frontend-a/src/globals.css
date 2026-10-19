@@ -1,0 +1,13 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@multica/ui/styles/tokens.css";
+@import "@multica/ui/styles/base.css";
+
+/* Tailwind v4 默认只扫描 Vite root（frontend-a/）下的文件，而原装代码在
+   root 之外的 vendor/。没有这两行，vendor 组件的 utility class 全都不会生成，
+   页面会像“没样式”一样垮掉。路径相对 globals.css 所在目录（src/），所以是 ../../vendor。 */
+@source "../../vendor/**/*.tsx";
+@source "../../vendor/**/*.ts";
+
+@custom-variant dark (&:is(.dark *));
