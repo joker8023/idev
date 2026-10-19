@@ -2,6 +2,11 @@ packages:
   - 'vendor/*'
   - 'frontend-a'
 
+allowBuilds:
+  esbuild: true
+  unicode-animations: true
+  unrs-resolver: true
+
 catalog:
   '@formatjs/intl-localematcher': ^0.8.4
   '@tailwindcss/postcss': ^4

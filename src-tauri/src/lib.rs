@@ -6,7 +6,7 @@ mod models;
 
 use tauri::Manager;
 
-fn main() {
+pub fn run() {
     tauri::Builder::default()
         .setup(|app| {
             let db = db::init_db(app.handle())?;
